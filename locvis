@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# output top 3 files with the most lines of code
+find . -name '*.java' -not -path "./.mvn/*" | xargs wc -l | sort -nr | head -n 4 | tail -n 3
