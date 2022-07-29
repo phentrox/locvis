@@ -5,6 +5,10 @@ A simple command line tool for linux to display the top source files with the mo
 - java
 - go
 
+## Features
+- Shows LOC (Lines of Code) for the top files
+- Displays paths to help accessing them directly
+
 ## Install
 ```sh
 # Download binary
@@ -25,14 +29,14 @@ sudo mv ./locvis /usr/local/bin
 # Programming Language
 lang: java
 
-# Top number of files with the highest count (default = 10)
+# Top number of files with the highest loc count (default = 10)
 top: 20
 
 # Show paths for files (default = true)
 paths: true
 
 # Additional Directories to ignore
-ignored-dirs:
+ignore-dirs:
   - autoconfigure
   - .ide
 ```

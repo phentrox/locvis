@@ -16,7 +16,9 @@ func main() {
 
 	var programmingLanguage string = localconfig.GetLang(localConfigVar)
 
+	var configDirsToBeSkiped []string = localConfigVar.IgnoreDirs
 	var dirsToBeSkipped = []string{".git", ".idea", ".mvn"}
+	dirsToBeSkipped = append(dirsToBeSkipped, configDirsToBeSkiped...)
 
 	var programmingLanguageSuffix string = programminglanguage.GetProgrammingLanguageSuffix(programmingLanguage)
 

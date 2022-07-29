@@ -20,9 +20,9 @@ func GetLocalConfig() entities.LocalConfig {
 
 	showPaths := true
 	defaultConfig := entities.LocalConfig{
-		Top:         10,
-		Paths:       &showPaths,
-		IgnoredDirs: []string{},
+		Top:        10,
+		Paths:      &showPaths,
+		IgnoreDirs: []string{},
 	}
 	return defaultConfig
 }
