@@ -1,4 +1,4 @@
-package localconfig
+package config
 
 import "locvis/entities"
 
