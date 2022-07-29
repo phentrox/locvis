@@ -3,6 +3,7 @@ A simple command line tool for linux to display the top 3 source files with the 
 
 ## Supported Languages
 - java
+- go
 
 ## Install
 ```sh
