@@ -6,6 +6,11 @@ A simple command line tool for linux to display the top 3 source files with the 
 
 ## Install
 ```sh
-cd locvis
-sudo ln ./locvis /usr/local/bin
+# Download binary
+
+# Create
+sudo mv ./locvis /usr/local/bin
 ```
+
+## Build from Source and Install
+    ./sh/build-and-upgrade.sh
