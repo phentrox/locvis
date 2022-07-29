@@ -27,7 +27,10 @@ lang: java
 # Top number of files with the highest count (default = 10)
 top: 20
 
-# Directories to ignore
+# Show paths for files (default = true)
+paths: true
+
+# Additional Directories to ignore
 ignored-dirs:
   - autoconfigure
   - .ide
