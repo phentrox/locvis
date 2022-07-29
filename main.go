@@ -19,9 +19,16 @@ func main() {
 	var programmingLanguageSuffix string = programminglanguage.GetProgrammingLanguageSuffix(configVar.Language)
 	var files []string = filewalk.GetFilesInDir(configVar.IgnoreDirs, programmingLanguageSuffix)
 	var lineCounts []entities.LineCount = linecount.CountLinesFromArrayWithPaths(files)
+	var totalLinesOfCode int = linecount.CountTotalLinesOfCode(lineCounts)
 	lineCounts = sorting.Sort(lineCounts)
+	var topLineCounts []entities.LineCount = slicing.GetTopSlice(lineCounts, configVar.Top)
 
-	var topTenHighestLineCounts []entities.LineCount = slicing.GetTopSlice(lineCounts, configVar.Top)
+	terminalOutputData := entities.TerminalOutputData{
+		LineCounts:       topLineCounts,
+		TotalLinesOfCode: totalLinesOfCode,
+		NumberOfFiles:    len(lineCounts),
+		ShowPaths:        configVar.Paths,
+	}
 
-	terminaloutput.PrintLineCount(topTenHighestLineCounts, configVar.Paths)
+	terminaloutput.PrintLineCount(terminalOutputData)
 }

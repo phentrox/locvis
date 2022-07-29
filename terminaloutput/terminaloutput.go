@@ -7,31 +7,33 @@ import (
 	"path"
 )
 
-func PrintLineCount(lineCounts []entities.LineCount, showPaths bool) {
+func PrintLineCount(terminalOutputData entities.TerminalOutputData) {
 	t := table.NewWriter()
 	t.SetOutputMirror(os.Stdout)
 
-	if showPaths {
-		addRowsWithPaths(lineCounts, t)
+	if terminalOutputData.ShowPaths {
+		addRowsWithPaths(terminalOutputData, t)
 	} else {
-		addRowsWithoutPaths(lineCounts, t)
+		addRowsWithoutPaths(terminalOutputData, t)
 	}
 
 	t.Render()
 }
 
-func addRowsWithoutPaths(lineCounts []entities.LineCount, t table.Writer) {
+func addRowsWithoutPaths(terminalOutputData entities.TerminalOutputData, t table.Writer) {
 	t.AppendHeader(table.Row{"LoC", "Filename"})
-	for _, lineCount := range lineCounts {
+	for _, lineCount := range terminalOutputData.LineCounts {
 		var filename string = path.Base(lineCount.Path)
 		t.AppendRow(table.Row{lineCount.LineCount, filename})
 	}
+	t.AppendFooter(table.Row{terminalOutputData.TotalLinesOfCode, terminalOutputData.NumberOfFiles})
 }
 
-func addRowsWithPaths(lineCounts []entities.LineCount, t table.Writer) {
+func addRowsWithPaths(terminalOutputData entities.TerminalOutputData, t table.Writer) {
 	t.AppendHeader(table.Row{"LoC", "Filename", "Path"})
-	for _, lineCount := range lineCounts {
+	for _, lineCount := range terminalOutputData.LineCounts {
 		var filename string = path.Base(lineCount.Path)
 		t.AppendRow(table.Row{lineCount.LineCount, filename, lineCount.Path})
 	}
+	t.AppendFooter(table.Row{terminalOutputData.TotalLinesOfCode, terminalOutputData.NumberOfFiles, ""})
 }
