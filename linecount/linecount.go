@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"io"
 	"locvis/entities"
+	"log"
 	"os"
 )
 
@@ -15,11 +16,15 @@ func CountLinesFromArrayWithPaths(arrayWithPaths []string) []entities.LineCount 
 		if err != nil {
 			panic(err)
 		}
-		defer file.Close()
 
 		lineCount, err := countLines(file)
 		if err != nil {
 			panic(err.Error())
+		}
+
+		err = file.Close()
+		if err != nil {
+			log.Fatalln("Could not close file ", file.Name())
 		}
 
 		lineCountEntity := entities.LineCount{
