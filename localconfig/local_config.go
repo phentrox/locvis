@@ -17,7 +17,14 @@ func GetLocalConfig() entities.LocalConfig {
 	if fileExists(YmlFileName) {
 		return parseYamlFile(YmlFileName)
 	}
-	return entities.LocalConfig{}
+
+	showPaths := true
+	defaultConfig := entities.LocalConfig{
+		Top:         10,
+		Paths:       &showPaths,
+		IgnoredDirs: []string{},
+	}
+	return defaultConfig
 }
 
 func parseYamlFile(fileName string) entities.LocalConfig {

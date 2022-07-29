@@ -24,9 +24,11 @@ func main() {
 		main()
 	}
 
+	var showPaths bool = localconfig.GetShowPaths(localConfigVar)
+
 	var files []string = filewalk.GetFilesInDir(dirsToBeSkipped, programmingLanguageSuffix)
 	var lineCounts []entities.LineCount = linecount.CountLinesFromArrayWithPaths(files)
 	lineCounts = sorting.Sort(lineCounts)
 	var topTenHighestLineCounts []entities.LineCount = slicing.GetTopTenSlice(lineCounts)
-	terminaloutput.PrintLineCount(topTenHighestLineCounts)
+	terminaloutput.PrintLineCount(topTenHighestLineCounts, showPaths)
 }

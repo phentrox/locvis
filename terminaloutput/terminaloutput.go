@@ -7,15 +7,31 @@ import (
 	"path"
 )
 
-func PrintLineCount(lineCounts []entities.LineCount) {
+func PrintLineCount(lineCounts []entities.LineCount, showPaths bool) {
 	t := table.NewWriter()
 	t.SetOutputMirror(os.Stdout)
-	t.AppendHeader(table.Row{"LoC", "Filename", "Path"})
 
+	if showPaths {
+		addRowsWithPaths(lineCounts, t)
+	} else {
+		addRowsWithoutPaths(lineCounts, t)
+	}
+
+	t.Render()
+}
+
+func addRowsWithoutPaths(lineCounts []entities.LineCount, t table.Writer) {
+	t.AppendHeader(table.Row{"LoC", "Filename"})
+	for _, lineCount := range lineCounts {
+		var filename string = path.Base(lineCount.Path)
+		t.AppendRow(table.Row{lineCount.LineCount, filename})
+	}
+}
+
+func addRowsWithPaths(lineCounts []entities.LineCount, t table.Writer) {
+	t.AppendHeader(table.Row{"LoC", "Filename", "Path"})
 	for _, lineCount := range lineCounts {
 		var filename string = path.Base(lineCount.Path)
 		t.AppendRow(table.Row{lineCount.LineCount, filename, lineCount.Path})
-		//fmt.Println(lineCount.LineCount, " ", filename, " ", lineCount.Path)
 	}
-	t.Render()
 }
