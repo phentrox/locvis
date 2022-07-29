@@ -24,7 +24,7 @@ sudo mv ./locvis /usr/local/bin
 # Programming Language
 lang: java
 
-# Top number of files with the highest count (preconfig = 10)
+# Top number of files with the highest count (default = 10)
 top: 20
 
 # Directories to ignore
