@@ -14,8 +14,9 @@ func GetProgrammingLanguageSuffix(programmingLanguage string) string {
 
 func getProgrammingLanguageSuffixes() map[string]string {
 	programmingLanguageSuffixes := map[string]string{
-		"java": ".java",
-		"go":   ".go",
+		"java":   ".java",
+		"go":     ".go",
+		"golang": ".go",
 	}
 	return programmingLanguageSuffixes
 }
