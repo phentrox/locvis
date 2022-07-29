@@ -1,3 +1,7 @@
+# testing config
+.locvis.yaml
+.locvis.yml
+
 # binary from build
 locvis
 
