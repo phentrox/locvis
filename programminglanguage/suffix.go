@@ -1,8 +1,15 @@
 package programminglanguage
 
+import "os"
+
 func GetProgrammingLanguageSuffix(programmingLanguage string) string {
 	programmingLanguageSuffixes := getProgrammingLanguageSuffixes()
-	return programmingLanguageSuffixes[programmingLanguage]
+	var suffix string = programmingLanguageSuffixes[programmingLanguage]
+	if suffix == "" {
+		println("Programming Language not supported: ", programmingLanguage)
+		os.Exit(1)
+	}
+	return suffix
 }
 
 func getProgrammingLanguageSuffixes() map[string]string {
