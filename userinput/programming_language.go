@@ -11,5 +11,7 @@ func GetProgrammingLanguage() string {
 
 	fmt.Scanf("%s", &programmingLanguage)
 
+	fmt.Println()
+
 	return programmingLanguage
 }
