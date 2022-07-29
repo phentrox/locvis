@@ -22,7 +22,7 @@ sudo mv ./locvis /usr/local/bin
 
 ## Local Config for Repositories
 ### Create file
-    touch .locvism.yaml
+    touch .locvis.yaml
 ### Yaml file
 ```yaml
 ---
