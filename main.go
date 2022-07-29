@@ -4,15 +4,17 @@ import (
 	"locvis/entities"
 	"locvis/filewalk"
 	"locvis/linecount"
+	"locvis/localconfig"
 	"locvis/programminglanguage"
 	"locvis/slicing"
 	"locvis/sorting"
 	"locvis/terminaloutput"
-	"locvis/userinput"
 )
 
 func main() {
-	var programmingLanguage string = userinput.GetProgrammingLanguage()
+	var localConfigVar entities.LocalConfig = localconfig.GetLocalConfig()
+
+	var programmingLanguage string = programminglanguage.Get(localConfigVar)
 
 	var dirsToBeSkipped = []string{".git", ".idea", ".mvn"}
 
