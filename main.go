@@ -12,7 +12,7 @@ func main() {
 	var localConfigVar entities.LocalConfig = localconfig.GetLocalConfig()
 	var configVar entities.Config = config.CreateConfig(localConfigVar)
 
-	lineCounts := linecount.GetLineCountsFromFiles(configVar)
+	var lineCounts []entities.LineCount = linecount.GetLineCountsFromFiles(configVar)
 	linecount.CreateLineCountDataAndPrintToTerminal(lineCounts, configVar)
 	statistics.CreateDataAndPrintToTerminal(lineCounts)
 }
