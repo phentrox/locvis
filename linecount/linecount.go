@@ -8,7 +8,7 @@ import (
 	"os"
 )
 
-func CountLinesFromArrayWithPaths(arrayWithPaths []string) []entities.LineCount {
+func countLinesFromArrayWithPaths(arrayWithPaths []string) []entities.LineCount {
 	var lineCounts []entities.LineCount
 
 	for _, path := range arrayWithPaths {
