@@ -1,5 +1,5 @@
 # LocVis
-A simple command line tool for linux to display the top source files with the most lines of code
+A simple command line tool to display repository stats
 
 ## Supported Languages
 - java
