@@ -1,4 +1,6 @@
 # LocVis
+**In Development!**
+
 A simple command line tool to display repository stats
 
 ## Supported Languages
