@@ -10,6 +10,7 @@ A simple command line tool to display repository stats
 ## Features
 - Shows LOC (Lines of Code) for the top files
 - Displays paths to help accessing them directly
+- Median
 
 ## Install
 ```sh
