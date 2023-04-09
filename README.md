@@ -3,10 +3,6 @@
 
 A simple command line tool to display repository stats
 
-## Supported Languages
-- java
-- go
-
 ## Features
 - Shows LOC (Lines of Code) for the top files
 - Displays paths to help accessing them directly
@@ -16,12 +12,10 @@ A simple command line tool to display repository stats
 ```sh
 # Download binary
 
-# Create
-sudo mv ./locvis /usr/local/bin
+# Move to bin folder
+sudo mv ./locvis /usr/bin
 ```
 
-## Build from Source and Install
-    ./sh/build-and-upgrade.sh
 
 ## Local Config for Repositories
 ### Create file
@@ -43,3 +37,11 @@ ignore-dirs:
   - autoconfigure
   - .ide
 ```
+
+## Run
+    locvis
+
+
+## Dev
+### Build from Source and Install
+    make build-and-replace
