@@ -1,7 +1,7 @@
 build-and-replace:
-	# delete old binary
-	sudo rm /usr/local/bin/locvis
+	# delete old binary (-f to not fail if it is not existing yet)
+	sudo rm -f /usr/bin/locvis
 	# build
 	go build
 	# move
-	sudo mv ./locvis /usr/local/bin
+	sudo mv ./locvis /usr/bin
