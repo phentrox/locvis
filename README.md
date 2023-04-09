@@ -1,10 +1,10 @@
 # LocVis
 **In Development!**
 
-A simple command line tool to display repository stats
+Simple command line tool to display lines of code analytics
 
 ## Features
-- Shows LOC (Lines of Code) for the top files
+- Show LOC (Lines of Code) for the top files
 - Displays paths to help accessing them directly
 - Median
 
