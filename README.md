@@ -43,5 +43,5 @@ ignore-dirs:
 
 
 ## Dev
-### Build from Source and Install
+### Build from Source and Install (Linux)
     make build-and-replace
