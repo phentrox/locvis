@@ -3,10 +3,13 @@ module locvis
 go 1.18
 
 require (
-	github.com/jedib0t/go-pretty/v6 v6.3.5 // indirect
-	github.com/mattn/go-runewidth v0.0.13 // indirect
-	github.com/montanaflynn/stats v0.6.6 // indirect
-	github.com/rivo/uniseg v0.2.0 // indirect
-	golang.org/x/sys v0.0.0-20190412213103-97732733099d // indirect
-	gopkg.in/yaml.v3 v3.0.1 // indirect
+	github.com/jedib0t/go-pretty/v6 v6.4.6
+	github.com/montanaflynn/stats v0.7.0
+	gopkg.in/yaml.v3 v3.0.1
+)
+
+require (
+	github.com/mattn/go-runewidth v0.0.14 // indirect
+	github.com/rivo/uniseg v0.4.4 // indirect
+	golang.org/x/sys v0.7.0 // indirect
 )
