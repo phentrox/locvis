@@ -15,13 +15,14 @@ func GetProgrammingLanguageSuffix(programmingLanguage string) string {
 func getProgrammingLanguageSuffixes() map[string]string {
 	// Only one for each language!
 	programmingLanguageSuffixes := map[string]string{
-		"java": ".java",
-		"go":   ".go",
-		"c":    ".c",
-		"js":   ".js",
-		"ts":   ".ts",
-		"rust": ".rs",
-		"c#":   ".cs",
+		"java":   ".java",
+		"go":     ".go",
+		"c":      ".c",
+		"js":     ".js",
+		"ts":     ".ts",
+		"rust":   ".rs",
+		"c#":     ".cs",
+		"python": ".py",
 	}
 	return programmingLanguageSuffixes
 }
