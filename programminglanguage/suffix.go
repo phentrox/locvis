@@ -21,6 +21,7 @@ func getProgrammingLanguageSuffixes() map[string]string {
 		"js":   ".js",
 		"ts":   ".ts",
 		"rust": ".rs",
+		"c#":   ".cs",
 	}
 	return programmingLanguageSuffixes
 }
