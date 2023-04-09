@@ -17,7 +17,7 @@ sudo mv ./locvis /usr/bin
 ```
 
 
-## Local Config for Repositories
+## Config
 ### Create file
     touch .locvis.yaml
 ### Yaml file
@@ -45,3 +45,11 @@ ignore-dirs:
 ## Dev
 ### Build from Source and Install (Linux)
     make build-and-replace
+
+## Supported Languages:
+- Java: java
+- Go: go
+- Rust: rs
+- C: c
+- JavaScript: js
+- TypeScript: ts
