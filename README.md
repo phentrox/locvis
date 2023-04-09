@@ -47,9 +47,11 @@ ignore-dirs:
     make build-and-replace
 
 ## Supported Languages:
-- Java: java
-- Go: go
-- Rust: rs
+- Python: python
 - C: c
+- Java: java
+- C#: c#
 - JavaScript: js
 - TypeScript: ts
+- Go: go
+- Rust: rs
